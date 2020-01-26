@@ -101,7 +101,8 @@ button:hover {
 .logo {
     display: flex;
     flex-direction: column;
-    align-items: left;
+    align-items: center;
+    padding-right: 3em;
     width: 35%;
 }
 

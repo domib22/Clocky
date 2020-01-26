@@ -16,10 +16,10 @@
 <?php include(dirname(__DIR__).'/menu.php'); ?>
 <div class="box">
     <div id="ctime">
-      <div class="logo">
+      <div>
       <!-- <h1 class="header">BUDZIK CLOCKY</h1> -->
         <img src="../Public/img/logo.svg">
-      </div>
+      </div><br/>
       <div class="square">
         <div class="digits" id="chr">00</div>
         <div class="text">HR</div>

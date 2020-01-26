@@ -33,6 +33,10 @@ class Routing {
             'alarmclock' => [
                 'controller' => 'ClockController',
                 'action' => 'alarmclock'
+            ],
+            'about' => [
+                'controller' => 'ClockController',
+                'action' => 'about'
             ]
         ];
     }

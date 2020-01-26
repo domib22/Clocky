@@ -21,7 +21,7 @@
                 <br/>
           </li>
           <li>
-                <a href="#"><strong>O Clocky</strong></a>
+                <a href="?page=about"><strong>O Clocky</strong></a>
           </li>
           <li>
               <hr>

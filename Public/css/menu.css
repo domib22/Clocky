@@ -46,7 +46,7 @@
     /* position: absolute; */
     top: 25px;
     left: 25px;
-    padding-left: 35px;
+    padding-left: 50px;
 }
 
 #nav-icon span {
@@ -58,7 +58,7 @@
 } 
 
 .out {
-    margin: 0em 0em 0em 64em;
+    margin: 0em 0em 0em 63em;
 }
 
 .user {

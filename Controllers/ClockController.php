@@ -8,4 +8,9 @@ class ClockController extends AppController {
     {   
         $this->render('alarmclock');
     }
+
+    public function about()
+    {   
+        $this->render('about');
+    }
 }

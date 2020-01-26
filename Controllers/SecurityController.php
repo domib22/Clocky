@@ -32,7 +32,7 @@ class SecurityController extends AppController {
             $_SESSION["role"] = $user->getRole();
 
             $url = "http://$_SERVER[HTTP_HOST]/";
-            header("Location: {$url}?page=alarmclock");
+            header("Location: {$url}?page=about");
             return;
         } else {
             $this->render('login', ['messages' => ['Uzupełnij wszystkie pola!']]);
