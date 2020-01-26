@@ -30,24 +30,12 @@ class UserRepository extends Repository {
     }
 
     public function getUsers(): array {
-        // $result = [];
         $stmt = $this->database->connect()->prepare('
             SELECT * FROM user WHERE email != :email;
         ');
         $stmt->bindParam(':email', $_SESSION['id'], PDO::PARAM_STR);
         $stmt->execute();
         $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-        // foreach ($users as $user) {
-        //     $result[] = new User(
-        //         $user['email'],
-        //         $user['password'],
-        //         $user['name'],
-        //         $user['surname'],
-        //         $user['id']
-        //     );
-        // }
-
         return $users;
     }
 }

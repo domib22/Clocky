@@ -12,9 +12,9 @@ function getUsers() {
         res.forEach(el => {
             $list.append(`<tr>
                         <td>${el.id}</td>
-                        <td>${el.email}</td>
                         <td>${el.name}</td>
                         <td>${el.surname}</td>
+                        <td>${el.email}</td>
                         </tr>`);
         });
     });

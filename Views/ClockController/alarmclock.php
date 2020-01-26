@@ -55,20 +55,30 @@
             <img src="../Public/img/XS_Clocky.svg">
             <h2><strong> Wybierz dźwięk budzika:</strong></h2>
           </div>
-            <form action="?page=alarmclock#openModal" method="POST">
-              <select id="sound">
+            <form action="?page=alarmclock" method="POST">
+              <select id="sound" name="sound">
               <option value="1">Rooster Crow</option>
               <option value="2">Wake-up-sound</option>
               <option value="3">Gentle-wake-up-clock</option>
+              <option value="4">crazy chicken</option>
               </select> <br/>
-              <button type="submit" class="abutton"><strong>ZAPISZ</strong></button>
+              <button type="submit" name="submit"value="submit"class="abutton"><strong>ZAPISZ</strong></button>
             </form>
           </div>
         </div>
 
 
     <audio id="alarm-sound" loop>
-      <source src="../Public/mp3/Rooster Crow.mp3" type="audio/mp3">
+      <?php
+      if($sounds != NULL){
+        ?><source src="<?=$sounds->getPath()?>" type="audio/mp3">
+        <?php
+      }
+      else{
+      ?><source src="../Public/mp3/wake-up-sound.mp3" type="audio/mp3">
+      <?php
+      }?>
+
     </audio>
 </div>
 <?php include(dirname(__DIR__).'/footer.php'); ?>
