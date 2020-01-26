@@ -1,0 +1,29 @@
+<svg id="Component_15_6" data-name="Component 15 – 6" xmlns="http://www.w3.org/2000/svg" width="136" height="129.89" viewBox="0 0 136 129.89">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #ff0101;
+      }
+
+      .cls-3 {
+        fill: #a4a4a4;
+      }
+    </style>
+  </defs>
+  <path id="Path_234" data-name="Path 234" class="cls-1" d="M52.713,0A52.713,52.713,0,1,1,0,52.713,52.713,52.713,0,0,1,52.713,0Z" transform="translate(15.759 14.705)"/>
+  <g id="Group_23" data-name="Group 23" transform="translate(76.21 31.104) rotate(30)">
+    <path id="Path_232" data-name="Path 232" class="cls-2" d="M10,0l10,33.987H0Z" transform="translate(0 0)"/>
+    <path id="Path_233" data-name="Path 233" class="cls-3" d="M10,0l10,33.987H0Z" transform="translate(19.993 67.975) rotate(180)"/>
+  </g>
+  <g id="alarm-clock_1_" data-name="alarm-clock (1)">
+    <path id="Path_235" data-name="Path 235" d="M174.319,46.838l2.644-2.644A25.3,25.3,0,1,0,141.181,8.41l-2.942,2.943a93.448,93.448,0,0,1,36.08,35.485Z" transform="translate(-48.374 -0.999)"/>
+    <path id="Path_236" data-name="Path 236" d="M20.056,46.838a93.448,93.448,0,0,1,36.08-35.485L53.193,8.41A25.3,25.3,0,1,0,17.41,44.193Z" transform="translate(-10 -1)"/>
+  </g>
+  <g id="alarm-clock_1_2" data-name="alarm-clock (1)" transform="translate(12.321 11.164)">
+    <path id="Path_239" data-name="Path 239" d="M126.871,63.464a55.446,55.446,0,1,0-89.607,43.645s-10.178,9.132-10.178,13.839,5.282,6.954,10.178,4.988,9.4-12.85,9.4-12.85a55.21,55.21,0,0,0,49.491.021s5.734,11.2,10.64,12.829,9.3-1.622,8.985-6.318-10.23-12.468-10.23-12.468a55.424,55.424,0,0,0,21.317-43.685Zm-99.786,0a44.349,44.349,0,1,1,44.349,44.39,44.37,44.37,0,0,1-44.349-44.39Z" transform="translate(-15.994 -7.922)"/>
+  </g>
+</svg>

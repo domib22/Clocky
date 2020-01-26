@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="312" height="63" viewBox="0 0 312 63">
+  <defs>
+    <filter id="Witaj_w_Clocky_" x="0" y="0" width="312" height="63" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Witaj_w_Clocky_)">
+    <text id="Witaj_w_Clocky_2" data-name="Witaj w Clocky!" transform="translate(156 42)" fill="#49bbf6" font-size="40" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="-146.514" y="0">Witaj w Clocky!</tspan></text>
+  </g>
+</svg>
