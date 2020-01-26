@@ -8,7 +8,7 @@ class UserRepository extends Repository {
     public function getUser(string $email): ?User 
     {
         $stmt = $this->database->connect()->prepare('
-            SELECT * FROM users WHERE email = :email
+            SELECT * FROM user WHERE email = :email
         ');
         $stmt->bindParam(':email', $email, PDO::PARAM_STR);
         $stmt->execute();
@@ -20,18 +20,19 @@ class UserRepository extends Repository {
         }
 
         return new User(
+            $user['id'],
             $user['email'],
             $user['password'],
             $user['name'],
             $user['surname'],
-            $user['id']
+            $user['id_role']
         );
     }
 
     public function getUsers(): array {
         // $result = [];
         $stmt = $this->database->connect()->prepare('
-            SELECT * FROM users WHERE email != :email;
+            SELECT * FROM user WHERE email != :email;
         ');
         $stmt->bindParam(':email', $_SESSION['id'], PDO::PARAM_STR);
         $stmt->execute();

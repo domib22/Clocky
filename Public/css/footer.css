@@ -1,0 +1,9 @@
+.footer {
+    background-color: #696763;
+    background: linear-gradient(180deg, rgb(143, 143, 143), #696763 80%);
+    height: 72px; 
+    /* align-items: center; */
+
+    padding-left: 2em;
+    color: white;
+}

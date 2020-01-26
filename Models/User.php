@@ -1,53 +1,50 @@
 <?php
 
 class User {
-    private $id;
     private $email;
     private $password;
     private $name;
     private $surname;
-    private $role = ['ROLE_USER'];
+    private $id;
+    private $role;
+    
 
     public function __construct(
+        int $id,
         string $email,
         string $password,
         string $name,
         string $surname,
-        int $id = null
+        int $role = 3
     ) {
+        $this->id = $id;
         $this->email = $email;
         $this->password = $password;
         $this->name = $name;
         $this->surname = $surname;
-        $this->id = $id;
+        $this->role = $role;
     }
 
     public function getId(): int
     {
         return $this->id;
     }
-
     public function getPassword(): string
     {
         return $this->password;
     }
-
     public function getEmail(): string
     {
         return $this->email;
     }
-
-
-    public function getRole(): array
+    public function getRole(): int
     {
         return $this->role;
     }
-
     public function getName(): string
     {
         return $this->name;
     }
-
     public function getSurname(): string
     {
         return $this->surname;

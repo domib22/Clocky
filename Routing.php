@@ -1,9 +1,8 @@
 <?php
 
-require_once 'Controllers//BoardController.php';
+require_once 'Controllers//ClockController.php';
 require_once 'Controllers//SecurityController.php';
 require_once 'Controllers//AdminController.php';
-require_once 'Controllers//StartController.php';
 
 class Routing {
     private $routes = [];
@@ -11,10 +10,6 @@ class Routing {
     public function __construct()
     {
         $this->routes = [
-            'board' => [
-                'controller' => 'BoardController',
-                'action' => 'getLatestPhotos'
-            ],
             'login' => [
                 'controller' => 'SecurityController',
                 'action' => 'login'
@@ -27,10 +22,6 @@ class Routing {
                 'controller' => 'SecurityController',
                 'action' => 'register'
             ],
-            'regulations' => [
-                'controller' => 'SecurityController',
-                'action' => 'regulations'
-            ],
             'admin' => [
                 'controller' => 'AdminController',
                 'action' => 'index'
@@ -39,13 +30,9 @@ class Routing {
                 'controller' => 'AdminController',
                 'action' => 'users'
             ],
-            'start' => [
-                'controller' => 'StartController',
-                'action' => 'cos'
-            ],
-            'adminer' => [
-                'controller' => 'StartController',
-                'action' => 'adminer'
+            'alarmclock' => [
+                'controller' => 'ClockController',
+                'action' => 'alarmclock'
             ]
         ];
     }

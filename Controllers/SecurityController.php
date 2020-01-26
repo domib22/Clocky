@@ -14,7 +14,7 @@ class SecurityController extends AppController {
         if ($this->isPost()) {
             if (!empty($_POST['email']) && !empty($_POST['password'])) {
             $email = $_POST['email'];
-            $password = $_POST['password'];
+            $password = md5($_POST['password']);
             
             $user = $userRepository->getUser($email);
 
@@ -32,7 +32,7 @@ class SecurityController extends AppController {
             $_SESSION["role"] = $user->getRole();
 
             $url = "http://$_SERVER[HTTP_HOST]/";
-            header("Location: {$url}?page=board");
+            header("Location: {$url}?page=alarmclock");
             return;
         } else {
             $this->render('login', ['messages' => ['Uzupełnij wszystkie pola!']]);
@@ -48,7 +48,7 @@ class SecurityController extends AppController {
         session_unset();
         session_destroy();
 
-        $this->render('login', ['messages' => ['Szczęśliwie się wylogowałeś!']]);
+        $this->render('login', ['messages' => ['Poprawne wylogowanie']]);
     }
 
     public function register()
@@ -69,6 +69,7 @@ class SecurityController extends AppController {
                 $rpassword = $_POST['repeatpassword'];
                 $rpassword = trim($rpassword);
 
+
                 if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
                     $this->render('register', ['messages' => ['Niepoprawny adres email!']]);
                     return;      
@@ -79,8 +80,8 @@ class SecurityController extends AppController {
                     return;
                 }
 
-                if ( (strlen($password) < 6) || (strlen($password) > 20) ) {
-                    $this->render('register', ['messages' => ['Twoje hasło musi zawierać od 6 do 20 znaków!']]);
+                if ( (strlen($password) < 5) || (strlen($password) > 20) ) {
+                    $this->render('register', ['messages' => ['Twoje hasło musi zawierać od 5 do 20 znaków!']]);
                     return;
                 }
 
@@ -88,7 +89,6 @@ class SecurityController extends AppController {
                     $this->render('register', ['messages' => ['Zbyt krótkie imię/nazwisko!']]);
                     return;
                 }
-
 
                 $user = $userRepository->getUser($email);
 
@@ -100,11 +100,11 @@ class SecurityController extends AppController {
                 $db = new Database();
                 $con = $db->connect();    
 
-                $res = $con->prepare("SELECT * FROM users WHERE email='$email'");
+                $res = $con->prepare("SELECT * FROM user WHERE email='$email'");
                 $res->execute();
                 $res = $res->fetchAll(PDO::FETCH_ASSOC);
 
-                $res = $con->prepare("INSERT INTO users VALUES (NULL, '$name' ,'$surname', '".md5($password)."', '$email');");
+                $res = $con->prepare("INSERT INTO user VALUES (NULL, 3, '$name' ,'$surname', '".md5($password)."', '$email');");
                 $res->execute();
 
                 $url = "http://$_SERVER[HTTP_HOST]/";
