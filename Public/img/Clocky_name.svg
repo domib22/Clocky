@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="259" height="77" viewBox="0 0 259 77">
+  <defs>
+    <filter id="CLOCKY_" x="0" y="0" width="259" height="77" filterUnits="userSpaceOnUse">
+      <feOffset dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.439"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#CLOCKY_)">
+    <text id="CLOCKY_2" data-name="CLOCKY " transform="translate(129.5 51.5)" fill="#fff" stroke="#000" stroke-width="0.5" font-size="50" font-family="Rockwell-Bold, Rockwell" font-weight="700"><tspan x="-119.763" y="0">CLOCKY </tspan></text>
+  </g>
+</svg>

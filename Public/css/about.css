@@ -1,0 +1,22 @@
+.about {
+    margin: 0;
+    height: 100%;
+    width: 80%;
+    direction: column;
+    background: #DBEAFE;
+
+    align-items: center;
+    text-align: justify;
+}
+
+.about > p {
+    margin: 0em 6em 0em 6em;
+}
+
+#cname {
+    margin: 1em 0.5em 0em 5.1em;
+}
+
+#cimage {
+    margin: 0em 0em 1em -0.5em;
+}
